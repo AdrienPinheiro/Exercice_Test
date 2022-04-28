@@ -30,7 +30,7 @@ test("Envoyer un panier avec un poid et une quantité negatif", () => {
 
 
 test("Envoyer un panier avec un prix TTC", () => {
-    expect(calculPanier(panier)).toBe(49)
+    expect(calculPanier(panier)).toBe(89)
 });
 test("Envoyer un panier avec des valeurs négative", () => {
     expect(() => calculPanier(panierNeg)).toThrow()
