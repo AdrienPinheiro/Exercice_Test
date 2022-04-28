@@ -8,7 +8,7 @@
   "version": "1.0.0",
   "main": "base.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js or NODE_OPTIONS=--experimental-vm-modules npx jest"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "type": "module",
   "keywords": [],
