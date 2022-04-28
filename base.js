@@ -1,35 +1,47 @@
 let prixTTC;
 let FDP;
+let total;
 const tva = 10;
 
-const panierHT = {name: "tee_shirt", quantity: 5, poid: 0.5, priceHT: 8}
-
-const calculPanier = (panier) => {
-    if(panier.quantity < 0 || panier.poid < 0 || panier.priceHT < 0){
+export const calculPanier = (panier) => {
+    if(panier.quantity <= 0 || panier.poid <= 0 || panier.priceHT <= 0){
         return console.log("Les valeurs sont négative ou neutre");
+    } else{
+        calculTVA(panier)
+        calculFDP(panier)
+        calculTotal(panier)
+        return total
     }
-    calculTVA(panier)
-    calculFDP(panier)
-    calculTotal(panier)
+    
 }
 
-const calculTVA = (panier) => {
+export const calculTVA = (panier) => {
+    if(panier.quantity <= 0 || panier.poid <= 0 || panier.priceHT <= 0){
+        return console.log("Les valeurs sont négative ou neutre");
+    } else {
     prixTTC = panier.priceHT * (1+ tva / 100)
     console.log(`Prix TTC: ${prixTTC}€`);
+    return prixTTC
+    }
 }
 
-const panierTTC = {...panierHT, prixTTC}
 
-const calculFDP = (panier) => {
+export const calculFDP = (panier) => {
+    if(panier.quantity <= 0 || panier.poid <= 0 || panier.priceHT <= 0){
+        return console.log("Les valeurs sont négative ou neutre");
+    } else {
     FDP = (panier.poid * panier.quantity) * 2
     console.log(`Frais de port: ${FDP}€`);
+    return FDP
+    }
 }
 
-const panierAll = {...panierTTC, FDP}
-
-const calculTotal = (panier) => {
-    const total = (prixTTC * panier.quantity) + FDP
+export const calculTotal = (panier) => {
+    if(panier.quantity <= 0 || panier.poid <= 0 || panier.priceHT <= 0){
+        return console.log("Les valeurs sont négative ou neutre");
+    } else {
+    total = (prixTTC * panier.quantity) + FDP
     console.log(`Prix total: ${total}€, avec ${FDP}€ de frais de port.`);
+    return total
+    }
 }
-
-calculPanier(panierHT)
