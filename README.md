@@ -1,0 +1,1 @@
+[![Build Status](https://app.travis-ci.com/AdrienPinheiro/Exercice_Test.svg?token=qytTnooWykp75Ptx71e9&branch=master)](https://app.travis-ci.com/AdrienPinheiro/Exercice_Test)
