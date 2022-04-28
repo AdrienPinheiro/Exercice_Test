@@ -13,7 +13,6 @@ test("Envoyer un panier avec un prix hors taxe negatif", () => {
 });
 
 
-
 test("Envoyer un panier avec un poid et une quantité positive", () => {
     expect(calculFDP(panier)).toBe(5)
 });
@@ -26,7 +25,6 @@ test("Envoyer un panier avec un poid negatif et une quantité positive", () => {
 test("Envoyer un panier avec un poid et une quantité negatif", () => {
     expect(() => calculFDP(panierNeg)).toThrow()
 });
-
 
 
 test("Envoyer un panier avec un prix TTC", () => {
