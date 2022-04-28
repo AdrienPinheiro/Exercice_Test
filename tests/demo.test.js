@@ -34,6 +34,6 @@ describe("Regarde si le calcul des frais de port est fonctionnel", () => {
 
 describe("Regarde si le calcul total de la commande est fonctionnel", () => {
     it("Envoyer un panier avec un prix TTC", () => {
-        should(calculPanier(panier)).be.equal(49)
+        should(calculPanier(panier)).be.equal(10)
     });
 });
